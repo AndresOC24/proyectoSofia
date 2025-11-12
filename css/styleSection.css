@@ -1,0 +1,61 @@
+/* Sección */
+.alphabet-section {
+  background: #d59a5a; /* ajusta a tu paleta */
+  padding: 48px 0;
+}
+
+.section-title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Grid adaptable */
+.alphabet-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+/* Tarjeta: imagen + texto */
+.alphabet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+
+/* Imagen responsive con marco consistente */
+.alphabet-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;       /* mantiene cuadrado */
+  object-fit: contain;        /* evita recortes */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Texto debajo */
+.alphabet-card figcaption {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2b2b2b;
+}
+
+/* Mejora en pantallas grandes */
+@media (min-width: 768px) {
+  .alphabet-grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .alphabet-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas cuando quepa */
+  }
+}
